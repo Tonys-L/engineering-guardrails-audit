@@ -8,7 +8,7 @@ Stack-agnostic. Business-agnostic. Never runs your tests.
 
 ## Why
 
-AI agents iterating on a codebase tend to take shortcuts — silent `catch {}`, dangling promises, cross-layer imports, fake-green tests. Documentation and conventions don't stop them. Only **programmatically enforced gates (Exit Code ≠ 0)** do.
+AI agents iterating on a codebase tend to take shortcuts — silently swallowed exceptions, unhandled async errors, cross-layer imports, fake-green tests. Documentation and conventions don't stop them. Only **programmatically enforced gates (Exit Code ≠ 0)** do.
 
 This skill audits whether those gates actually exist — and whether they actually fire.
 
@@ -24,10 +24,10 @@ Works with Claude Code, Cursor, Codex, TRAE, and 75+ agents supported by the [sk
 
 | # | Tripwire | Guards against |
 |---|---|---|
-| 1 | Semantics & types | Implicit any, dangling promises, strict-mode erosion |
+| 1 | Semantics & types | Strict-check erosion, unhandled async failures, type-assertion escape hatches |
 | 2 | Architecture topology | Cross-layer imports, circular dependencies |
 | 3 | Contract sync | Version SSOT, manifest ↔ implementation drift, i18n asymmetry |
-| 4 | Quality anti-gaming | Empty catch, duplication threshold, coverage floor |
+| 4 | Quality anti-gaming | Empty catch/except, duplication threshold, coverage floor |
 | 5 | Environment purity | Conflict markers, private absolute paths, artifact size budget |
 | 6 | Anti fake-green | Roundtrip fidelity tests, direct-source imports, single aggregate gate |
 
