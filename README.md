@@ -53,7 +53,7 @@ Level is computed by a deterministic formula (longest qualifying segment, at mos
 
 ## Evidence Grades
 
-Every "armed" verdict carries a grade: `E1 CI-enforced > E2 local aggregate > E3 manual > E4 config-only > E5 paper-only`.
+Every "armed" verdict carries a grade: `E1 CI merge-blocking > E2 local aggregate / git hooks > E3 manual > E4 config-only > E5 paper-only`.
 
 ## Usage
 
